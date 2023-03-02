@@ -3,6 +3,20 @@
     <div class="content">
       <p class="title">2022-2023学年春季学期开学初思想动态调研问卷</p>
       <p class="sub-title">（2023年2月）</p>
+      <p class="p">亲爱的同学：</p>
+      <p class="p"><span></span>您好！</p>
+      <p class="p">
+        <span></span
+        >为了了解大家新学期返校后的心理状况和实际需求，提供更加有效的管理服务，天津大学党委学生工作部、学生处面向所有同学发起此次调研。
+      </p>
+      <p class="p">
+        <span></span
+        >本次调研采用自愿作答的方式，全部作答完成约3-5分钟。调研数据将以群体为单位进行分析和报告，对涉及的个人信息将严格保密。
+      </p>
+      <p class="p">
+        <span></span>在填写过程中，请根据您的真实感受作答，感谢您的支持与参与！
+      </p>
+      <p class="sub-p">天津大学党委学生工作部、学生处</p>
       <!-- Question 1 -->
       <p class="question" id="q1"><span>1.</span>您的性别是：</p>
       <div class="options options-line">
@@ -276,12 +290,12 @@
           :text="options_text[8][0]"
           @change="(val) => (a_8 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="b_8"
           :text="options_text[8][1]"
           @change="(val) => (b_8 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="c_8"
@@ -306,7 +320,7 @@
           :text="options_text[8][5]"
           @change="(val) => (f_8 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="g_8"
           :text="options_text[8][6]"
@@ -323,19 +337,19 @@
           :value="i_8"
           :text="options_text[8][8]"
           @change="(val) => (i_8 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="j_8"
           :text="options_text[8][9]"
           @change="(val) => (j_8 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="k_8"
           :text="options_text[8][10]"
           @change="(val) => (k_8 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="l_8"
@@ -360,12 +374,12 @@
           :text="options_text[8][14]"
           @change="(val) => (o_8 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="p_8"
           :text="options_text[8][15]"
           @change="(val) => (p_8 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="q_8"
@@ -378,12 +392,12 @@
           :text="options_text[8][17]"
           @change="(val) => (r_8 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="s_8"
           :text="options_text[8][18]"
           @change="(val) => (s_8 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="t_8"
@@ -423,7 +437,7 @@
           :text="options_text[9][2]"
           @change="(val) => (c_9 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="d_9"
           :text="options_text[9][3]"
@@ -440,7 +454,7 @@
           :value="f_9"
           :text="options_text[9][5]"
           @change="(val) => (f_9 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="g_9"
@@ -453,12 +467,12 @@
           :text="options_text[9][7]"
           @change="(val) => (h_9 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="i_9"
           :text="options_text[9][8]"
           @change="(val) => (i_9 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="j_9"
@@ -489,12 +503,12 @@
           :text="options_text[9][13]"
           @change="(val) => (n_9 = val)"
         />
-        <checkbox
+        <!-- <checkbox
           @calc="calcProgress"
           :value="o_9"
           :text="options_text[9][14]"
           @change="(val) => (o_9 = val)"
-        />
+        /> -->
         <checkbox
           @calc="calcProgress"
           :value="p_9"
@@ -855,6 +869,7 @@
             :max="5"
             :marks="marks"
             :min="1"
+            :show-tooltip="false"
           >
           </el-slider>
         </div>
@@ -868,6 +883,7 @@
             :max="5"
             :marks="marks"
             :min="1"
+            :show-tooltip="false"
           >
           </el-slider>
         </div>
@@ -881,6 +897,7 @@
             :max="5"
             :marks="marks"
             :min="1"
+            :show-tooltip="false"
           >
           </el-slider>
         </div>
@@ -894,19 +911,21 @@
             :max="5"
             :marks="marks"
             :min="1"
+            :show-tooltip="false"
           >
           </el-slider>
         </div>
         <div class="slider-line">
           <p>{{ options_text[17][4] }}</p>
           <el-slider
-            class="slider"
+            class="slider noSelect"
             v-model="e_17"
             :step="1"
             show-stops
             :max="5"
             :marks="marks"
             :min="1"
+            :show-tooltip="false"
           >
           </el-slider>
         </div>
@@ -3362,6 +3381,24 @@ export default {
   margin: 10px 0;
   margin-bottom: 20px;
 }
+.p {
+  font-size: 19px;
+  margin: 0;
+  margin-bottom: 2px;
+  line-height: 30px;
+}
+.p span {
+  display: inline-block;
+  width: 30px;
+}
+.sub-p {
+  font-size: 19px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  text-align: right;
+}
 .question {
   color: black;
   font-size: 18px;
@@ -3440,14 +3477,25 @@ export default {
   .sub-title {
     font-size: 17px;
   }
+  .p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .p span {
+    width: 24px;
+  }
+  .sub-p {
+    font-size: 16px;
+    line-height: 26px;
+  }
   .question {
     font-size: 16px;
   }
   .question span {
-    width: 20px;
+    width: 24px;
   }
   .options {
-    padding-left: 20px;
+    padding-left: 24px;
   }
   .input {
     padding: 0 8px;
@@ -3467,7 +3515,7 @@ export default {
     font-size: 16px;
   }
   .slider {
-    padding-left: 10px;
+    padding-left: 12px;
   }
   .button {
     width: 160px;
@@ -3482,6 +3530,12 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+.noSelect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .el-progress-bar__outer {
   border-top-left-radius: 0;

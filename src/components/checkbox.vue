@@ -159,7 +159,6 @@ export default {
     width: 12px;
     height: 12px;
     border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 4px;
   }
   .checkBox div {
     width: 24px;
